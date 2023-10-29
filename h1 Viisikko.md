@@ -127,6 +127,11 @@ $ sudo salt-call --local grains.item osfinger virtual cpu_model
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/230b22e8-9113-415c-976f-5348f5e7fafa)
 
 
+## Lähteet
+
+https://terokarvinen.com/2023/configuration-management-2023-autumn/?fromSearch=infra%20as%20code
+
+
 
 
 
