@@ -124,7 +124,23 @@ e) Aja useita idempotentteja (state.single) komentoja verkon yli.
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/0147ee87-a8dd-4403-94a8-4e807a2d2417)
 
 
-- f) Kerää teknistä tietoa orjista verkon yli (grains.item)
+### Kerää teknistä tietoa orjista verkon yli (grains.item)
 
-- g) Aja shell-komento orjalla verkon yli.
-- h) Hello, IaC. Tee infraa koodina kirjoittamalla /srv/salt/hello/init.sls. Aja tila jollekin orjalle. Tila voi esimerkiksi tehdä esimerkkitiedoston johonkin hakemistoon. Testaa toisella komennolla, että pyytämäsi muutos on todella tehty.
+- Käytämme tähän komentoa:
+  $ sudo salt '*' grains.items
+- ... jolloin tulostukseen tulee orjakoneiden teknistä tietoa. Voimme kokeilla saada ainoastaan tietyllä tägillä tietoa orjakoneen tiedoista.
+- $ sudo salt '*' grains.item osfinger
+  ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/ff7fd912-6efb-45bd-8d1e-84cf5c892003)
+
+
+## Aja shell-komento orjalla verkon yli.
+
+
+
+Hello, IaC. Tee infraa koodina kirjoittamalla /srv/salt/hello/init.sls. Aja tila jollekin orjalle. Tila voi esimerkiksi tehdä esimerkkitiedoston johonkin hakemistoon. Testaa toisella komennolla, että pyytämäsi muutos on todella tehty.
+
+## Lähteet
+- https://terokarvinen.com/2023/salt-vagrant/ - Tero Karvinen, Salt Vagrant.
+- https://developer.hashicorp.com/vagrant/downloads - Hashicorp - Vagrant install.
+- Lähde: https://devops.stackexchange.com/questions/653/what-is-the-definition-of-cattle-not-pets - Slater 2017 - What is the definition of "Cattle not Pets"?.
+- https://terokarvinen.com/2023/configuration-management-2023-autumn/ - Palvelinten Hallinta 2023, Tero Karvinen
