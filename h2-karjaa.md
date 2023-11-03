@@ -89,7 +89,8 @@ Vagrant.configure("2") do |config|
 		tmaster.vm.network "private_network", ip: "192.168.12.3"
 		tmaster.vm.hostname = "tmaster"
 	end
-end ```
+end
+```
 
 $ vagrant up
 
