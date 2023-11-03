@@ -124,6 +124,7 @@ e) Aja useita idempotentteja (state.single) komentoja verkon yli.
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/0147ee87-a8dd-4403-94a8-4e807a2d2417)
 
 
-f) Kerää teknistä tietoa orjista verkon yli (grains.item)
-g) Aja shell-komento orjalla verkon yli.
-h) Hello, IaC. Tee infraa koodina kirjoittamalla /srv/salt/hello/init.sls. Aja tila jollekin orjalle. Tila voi esimerkiksi tehdä esimerkkitiedoston johonkin hakemistoon. Testaa toisella komennolla, että pyytämäsi muutos on todella tehty.
+- f) Kerää teknistä tietoa orjista verkon yli (grains.item)
+
+- g) Aja shell-komento orjalla verkon yli.
+- h) Hello, IaC. Tee infraa koodina kirjoittamalla /srv/salt/hello/init.sls. Aja tila jollekin orjalle. Tila voi esimerkiksi tehdä esimerkkitiedoston johonkin hakemistoon. Testaa toisella komennolla, että pyytämäsi muutos on todella tehty.
