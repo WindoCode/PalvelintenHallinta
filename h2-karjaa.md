@@ -135,6 +135,13 @@ e) Aja useita idempotentteja (state.single) komentoja verkon yli.
 
 ## Aja shell-komento orjalla verkon yli.
 
+- Kokeillaan tehdä kansio:
+- $ sudo salt '*' state.single cmd.run 'mkdir testi'
+- Jonka jälkeen poistetaan kyseinen kansio:
+- $ sudo salt '*' state.single cmd.run 'rmdir testi'
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/4fe0b828-6e2e-41d6-9cfc-12bb57b1980f)
+
 
 
 Hello, IaC. Tee infraa koodina kirjoittamalla /srv/salt/hello/init.sls. Aja tila jollekin orjalle. Tila voi esimerkiksi tehdä esimerkkitiedoston johonkin hakemistoon. Testaa toisella komennolla, että pyytämäsi muutos on todella tehty.
