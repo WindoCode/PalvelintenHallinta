@@ -32,7 +32,7 @@ Uudella koneella
 ### a) Asenna Vagrant. (Linux)
 - Ensiksi ladataan Vagrantin asennustiedosto
 
-Linkki: https://developer.hashicorp.com/vagrant/downloads
+- Linkki: https://developer.hashicorp.com/vagrant/downloads
 $ sudo apt update
 $ sudo apt install vagrant
 
