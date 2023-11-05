@@ -164,5 +164,5 @@ $ sudo salt '*' state.apply
 ## Lähteet
 - https://terokarvinen.com/2023/salt-vagrant/ - Tero Karvinen, Salt Vagrant.
 - https://developer.hashicorp.com/vagrant/downloads - Hashicorp - Vagrant install.
-- Lähde: https://devops.stackexchange.com/questions/653/what-is-the-definition-of-cattle-not-pets - Slater 2017 - What is the definition of "Cattle not Pets"?.
+- https://devops.stackexchange.com/questions/653/what-is-the-definition-of-cattle-not-pets - Slater 2017 - What is the definition of "Cattle not Pets"?.
 - https://terokarvinen.com/2023/configuration-management-2023-autumn/ - Palvelinten Hallinta 2023, Tero Karvinen
