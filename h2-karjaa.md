@@ -141,7 +141,8 @@ e) Aja useita idempotentteja (state.single) komentoja verkon yli.
 - Jonka jälkeen poistetaan kyseinen kansio:
 - $ sudo salt '*' state.single cmd.run 'rmdir testi'
 
-![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/4fe0b828-6e2e-41d6-9cfc-12bb57b1980f)
+![image](![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/d7540c27-a2ce-4ee8-a5ff-c46c925ebefa)
+)
 
 
 
