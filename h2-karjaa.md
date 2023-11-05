@@ -13,7 +13,7 @@
 - Lähde: https://devops.stackexchange.com/questions/653/what-is-the-definition-of-cattle-not-pets
 
 
-## Karvinen 2017: Vagrant Revisited – Install & Boot New Virtual Machine in 31 seconds (Suosittelen koneeksi 'vagrant init debian/bullseye64')
+## Karvinen 2017: Vagrant Revisited – Install & Boot New Virtual Machine in 31 seconds
 
 31 sekunnin virtuaalikoneen asennus
 
