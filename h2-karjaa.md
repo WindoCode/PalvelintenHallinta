@@ -43,11 +43,11 @@ $ sudo apt install vagrant
 
 ## Asenna yksi kone Vagrantilla, ota siihen SSH-yhteys, osoita että netti toimii.
 
-$ sudo apt-get update
-$ sudo apt-get -y install virtualbox vagrant micro
+- $ sudo apt-get update
+- $ sudo apt-get -y install virtualbox vagrant micro
 
-$ mkdir saltdemo; cd saltdemo
-$ nano Vagrantfile
+- $ mkdir saltdemo; cd saltdemo
+- $ nano Vagrantfile
 
 - Käytämme valmista vagrantfileä virtuaalikoneiden tekemiseen:
 ```
