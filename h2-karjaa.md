@@ -18,13 +18,13 @@
 31 sekunnin virtuaalikoneen asennus
 
 Asenna VirtualBox ja Vagrant
-$ sudo apt-get update
-$ sudo apt-get -y install vagrant virtualbox
+- $ sudo apt-get update
+- $ sudo apt-get -y install vagrant virtualbox
 
 Uudella koneella
-$ vagrant init debian/bullseye64
-$ vagrant up
-$ vagrant ssh
+- $ vagrant init debian/bullseye64
+- $ vagrant up
+- $ vagrant ssh
 
 - Lähde: https://terokarvinen.com/2017/04/11/vagrant-revisited-install-boot-new-virtual-machine-in-31-seconds/ 
 
