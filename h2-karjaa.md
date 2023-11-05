@@ -110,8 +110,8 @@ $ ping google.com
 
 c), d) Oma orjansa. Asenna Salt herra ja orja samalle koneelle.
 
--Asensimme salt:in ylempänä, jossa teimme myös verkon koneiden välille.
--Voimme testata koneiden välistä yhteyttä ja käyttää komentoja
+- Asensimme salt:in ylempänä, jossa teimme myös verkon koneiden välille.
+- Voimme testata koneiden välistä yhteyttä ja käyttää komentoja
 
 e) Aja useita idempotentteja (state.single) komentoja verkon yli.
 - Kokeillaan komentoa $ $ sudo salt '*' state.single file.managed '/tmp/see-you-at-github-windocode'
