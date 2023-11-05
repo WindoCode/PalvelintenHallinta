@@ -1,4 +1,4 @@
-# Karjaa - Vagrantin käyttöä ja salttia
+# h2-Karjaa - Vagrantin käyttöä ja salttia
 ## Slater 2017: What is the definition of "cattle not pets"?.
 
 - "Lemmikit" ja "Karja" ovat käsitteitä, jotka kuvastavat erilaista tapaa suhtautua palvelimiin ja niiden hallintaan.
