@@ -144,7 +144,22 @@ e) Aja useita idempotentteja (state.single) komentoja verkon yli.
 
 
 
-Hello, IaC. Tee infraa koodina kirjoittamalla /srv/salt/hello/init.sls. Aja tila jollekin orjalle. Tila voi esimerkiksi tehdä esimerkkitiedoston johonkin hakemistoon. Testaa toisella komennolla, että pyytämäsi muutos on todella tehty.
+## Hello, IaC. Tee infraa koodina kirjoittamalla /srv/salt/hello/init.sls.
+- Tehdään ensiksi kansio infrakoodille.
+$ sudo mkdir -p /srv/salt/hello
+- Kirjoitetaan sls-tiedosto, jolla ajetaan infrakoodi. Tiedosto käyttää YAML-syntaksia.
+$ sudoedit /srv/salt/hello/init.sls
+- Tiedoston sisälle kirjoitetaan:
+  ```
+  /tmp/infra-as-code:
+  file.managed
+  ```
+- Seuraavaksi ajetaan koodi:
+$ sudo salt '*' state.apply
+- Ja uudestaan, että koodi on varmasti ajettu oikein, kommenteissa login tulisi ilmoittaa, että kyseinen tiedosto on jo olemassa.
+  ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/59811e3e-2a4f-4c85-b539-c09ddc1b16ee)
+- Voimme todeta koodin toimivan.
+
 
 ## Lähteet
 - https://terokarvinen.com/2023/salt-vagrant/ - Tero Karvinen, Salt Vagrant.
