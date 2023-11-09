@@ -78,4 +78,15 @@ $ git push
 
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/332d8b2b-17d1-494d-9592-6ec0be312408)
 
+## c) Doh! Tee tyhmä muutos gittiin. Tuhoa huonot muutokset.
+- Lisäämme git-varastoon "henkilötietoja", jotka eivät saa olla osana repoa.
+```
+$ nano user_data
+$ git add .
+$ ls (Tiedosto on luotu repositioon "user_data")
+$ git reset --hard
+$ ls
+```
+- Lopputulos: Saimme poistettua henkilötiedot. (huh)
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/4ac3a341-8ab2-499d-a4ea-d0409e6e02f2)
 
