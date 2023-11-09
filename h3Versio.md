@@ -1,5 +1,10 @@
 # Versio
 
+## Testiympäristö
+- Käyttöjärjestelmä: Ubuntu 22.04 LTS
+- CPU: Intel® Core™ i5-1135G7 2.4 GHz
+- Muisti: 8 GB
+
 ## Online. Tee uusi varasto GitHubiin.
 - Painetaan plus-ikonia Githubissa ja create new repository.
 <p align="center">
