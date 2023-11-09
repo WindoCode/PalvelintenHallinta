@@ -22,6 +22,14 @@
 </p>
 
 ## b) Dolly. Kloonaa edellisessä kohdassa tehty uusi varasto itsellesi, tee muutoksia, puske ne palvelimelle, ja näytä, että ne ilmestyvät weppiliittymään.
+- Luon ensiksi ssh-avainparin omalla tietokoneella, jonka jälkeen yhdistän sen GitHubiin, tämän jälkeen kloonaamme, muokkaamme ja puskemme muutokset GitHubiin.
 
+### SSH-avainparin luominen
 
+-Ensiksi tarvitsemme päivitykset koneelle sekä SSH-palvelun, jos sitä ei ole.:
+
+```
+$ sudo apt update
+$ sudo apt-get install openssh-server
+```
 
