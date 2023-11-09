@@ -33,3 +33,49 @@ $ sudo apt update
 $ sudo apt-get install openssh-server
 ```
 
+- Tämän jälkeen luomme uuden SSH-avainparin:
+```
+$ ssh-keygen
+```
+- Testikäytössä en lisää avaimelle passphrase:a. Jos käytät ssh-avainta tuotannossa, tämän lisääminen on välttämätöntä.
+
+<p align="center">
+<img src="https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/2443f67c-92a7-484d-9bc7-41cf7d98a811" width=50% height=50%>
+</p>
+
+- Logissa ilmoitetaan avaimen lokaatioksi `/home/valtteri/.ssh/id_rsa.pub`. Kopioidaan kyseinen avain ja lisätään se GitHubiin.
+```
+$ cd /home/valtteri/.ssh/
+$ nano id_rsa.pub
+$ cat ~/.ssh/id_rsa.pub
+```
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/692d5719-3da9-46b7-b774-b9978f90bf59)
+
+- Kopioidaan id_rsa.pub-julkinen avain ja liitetään se GitHubiin.
+- Avataan GitHub -> Settings -> SSH and GPG-keys -> Add a SSH-key
+- Liitetään tiedot ja annetaan githubissa kuvaava nimi avaimelle. 2FA pyytää vielä varmistamaan puhelimella muutoksen.
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/6a8c4e50-ba45-402f-942a-63fac451511f)
+
+- Seuraavaksi kloonataan uusi varasto. `$ git clone git@github.com:WindoCode/Testi.git`.
+- Siirrytään koneella repoon: `$ cd .ssh/Testi`.
+- Lisätään tekstitiedosto: tärkeä.md, sisällytetään tekstiä testin vuoksi.
+- Git pyytää meidän tietoja, annetaan ne muutoksen yhteydessä: 
+```
+$ git config --global user.email "valtteribaus@gmail.com
+$ git config --global user.name "Valtteri Heinonen"
+$ git commit
+```
+- Commit-komento avasi kommenttitiedoston, johon lisäämme kommentin: "Add important information related this project.".
+
+```
+$ git push
+```
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/897f818e-3f45-43c6-b8da-4f04eb2ff30f)
+
+## Lopputulos: Tiedosto on syntynyt uuteen varastoon GitHubissa!
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/332d8b2b-17d1-494d-9592-6ec0be312408)
+
+
