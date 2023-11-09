@@ -2,6 +2,11 @@
 
 ## Online. Tee uusi varasto GitHubiin.
 - Painetaan plus-ikonia Githubissa ja create new repository.
-![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/3baa390f-5ed7-4a97-94c3-b82f50baf6f1)
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/3baa390f-5ed7-4a97-94c3-b82f50baf6f1 =300x200)
 - Asetetaan nimeksi "Testi, lyhyeen kuvaukseen tehtävänannon mukaan "winter". Lisätään README-tiedosto sekä GNU v3.0-lisenssi.
-![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/f976bdee-df33-4714-94f6-59f117a6c43e)
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/f976bdee-df33-4714-94f6-59f117a6c43e =300x200)
+
+### Lopputulos: Saimme tehtyä tehtävänannon mukaisen varaston!
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/4d3c37ba-05dc-446b-8873-4f84e640f614 =300x200)
+
+
