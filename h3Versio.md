@@ -74,7 +74,7 @@ $ git push
 
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/897f818e-3f45-43c6-b8da-4f04eb2ff30f)
 
-## Lopputulos: Tiedosto on syntynyt uuteen varastoon GitHubissa!
+#### Lopputulos: Tiedosto on syntynyt uuteen varastoon GitHubissa!
 
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/332d8b2b-17d1-494d-9592-6ec0be312408)
 
