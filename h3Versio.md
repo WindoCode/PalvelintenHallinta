@@ -10,6 +10,7 @@
 <p align="center">
 <img src="https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/f976bdee-df33-4714-94f6-59f117a6c43e" width=50% height=50%>
 </p>
+
 ### Lopputulos: Saimme tehtyä tehtävänannon mukaisen varaston!
 <p align="center">
 <img src="https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/4d3c37ba-05dc-446b-8873-4f84e640f614" width=50% height=50%>
