@@ -26,7 +26,7 @@
 
 ### SSH-avainparin luominen
 
--Ensiksi tarvitsemme päivitykset koneelle sekä SSH-palvelun, jos sitä ei ole.:
+-Ensiksi tarvitsemme päivitykset koneelle sekä git:in, jos sitä ei ole.:
 
 ```
 $ sudo apt update
