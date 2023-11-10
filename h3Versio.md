@@ -88,5 +88,12 @@ $ git reset --hard
 $ ls
 ```
 - Lopputulos: Saimme poistettua henkilötiedot. (huh)
+
+## d) Tukki. Tarkastele ja selitä varastosi lokia. 
+- Pääsemme logiin käsiksi komennolla: `git log --patch`
+- Ensimmäisenä saamme tiedon viimeisimmästä muutoksesta, Saamme tiedon kuka sen teki ja milloin (Minä, Perjantai, 00:22). Seuraavaksi meille esitetään kommentti, jonka varaston muokkaaja on lisännyt, tässä tapauksella 'Add important information related this project'
+- Toiseksi saamme tiedon reposition luomisesta. Tämän teki minun Github-käyttäjä. (Torstai,23:16)
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/3c9944d7-ac35-4ca0-9dcb-ea743b1890b5)
+
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/4ac3a341-8ab2-499d-a4ea-d0409e6e02f2)
 
