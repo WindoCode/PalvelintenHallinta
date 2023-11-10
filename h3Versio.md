@@ -93,7 +93,14 @@ $ ls
 - Pääsemme logiin käsiksi komennolla: `git log --patch`
 - Ensimmäisenä saamme tiedon viimeisimmästä muutoksesta, Saamme tiedon kuka sen teki ja milloin (Minä, Perjantai, 00:22). Seuraavaksi meille esitetään kommentti, jonka varaston muokkaaja on lisännyt, tässä tapauksella 'Add important information related this project'
 - Toiseksi saamme tiedon reposition luomisesta. Tämän teki minun Github-käyttäjä. (Torstai,23:16)
+- `diff --git "a/t\303\244rke\303\244.md" "b/t\303\244rke\303\244.md"` Kertoo, että uusi tiedosto lisätään repoon.
+- `new file mode 100644`, nopean googlauksen perusteella kertoo, että kyseessä on tiedostolle muokatavvat tiedosto-oikeudet, tässä tapauksessa normaalit oikeudet. 
+
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/3c9944d7-ac35-4ca0-9dcb-ea743b1890b5)
 
 
+## Lähteet
+
+Tero Karvinen - [Tehtävänanto](https://terokarvinen.com/2023/configuration-management-2023-autumn/#h3-versio).
+Git, tiedoston-oikeus - [new file mode 100644](https://git-scm.com/book/sv/v2/Git-Internals-Git-Objects).
 
