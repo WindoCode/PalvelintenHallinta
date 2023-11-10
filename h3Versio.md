@@ -101,6 +101,6 @@ $ ls
 
 ## Lähteet
 
-Tero Karvinen - [Tehtävänanto](https://terokarvinen.com/2023/configuration-management-2023-autumn/#h3-versio).
-Git, tiedoston-oikeus - [new file mode 100644](https://git-scm.com/book/sv/v2/Git-Internals-Git-Objects).
+- Tero Karvinen - [Tehtävänanto](https://terokarvinen.com/2023/configuration-management-2023-autumn/#h3-versio).
+- Git, tiedoston-oikeus - [new file mode 100644](https://git-scm.com/book/sv/v2/Git-Internals-Git-Objects).
 
