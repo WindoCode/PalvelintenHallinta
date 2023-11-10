@@ -30,7 +30,7 @@
 
 ```
 $ sudo apt update
-$ sudo apt-get install openssh-server
+$ sudo apt-get install git
 ```
 
 - Tämän jälkeen luomme uuden SSH-avainparin:
