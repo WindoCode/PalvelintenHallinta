@@ -23,16 +23,13 @@ base:
 - Data on järjestetty avain: arvo pareiksi.
 Esimerkki: `avain: arvo`
 
-- Määritykset käyttävät kaksoispistettä ja yhtä välilyöntiä (“: ”) merkitsemään avain: arvo pareja.
-Esimerkki: `nimi: Matti`
+- Määritykset käyttävät kaksoispistettä ja yhtä välilyöntiä (“: ”) merkitsemään avain: arvo pareja: `nimi: Matti`
 
-- Kaikki avaimet/ominaisuudet ovat kirjainkoosta riippuvaisia.
-Esimerkki: Nimi ja nimi ovat kaksi eri avainta.
+- Kaikki avaimet/ominaisuudet ovat kirjainkoosta riippuvaisia.`Nimi` ja `nimi` ovat kaksi eri avainta.
 
 - Sarkaimia EI sallita, käytä VAIN välilyöntejä.
 
-Kommentit alkavat risuaidalla “#”.
+- Kommentit alkavat risuaidalla “#”.
 `# Tämä on kommentti`
-
 
 ## Salt contributors: Salt states, kohdat
