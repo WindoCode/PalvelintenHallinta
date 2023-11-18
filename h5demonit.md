@@ -29,8 +29,7 @@ Esimerkki: `nimi: Matti`
 - Kaikki avaimet/ominaisuudet ovat kirjainkoosta riippuvaisia.
 Esimerkki: Nimi ja nimi ovat kaksi eri avainta.
 
-Sarkaimia EI sallita, käytä VAIN välilyöntejä.
-Esimerkki: `avain:\t` arvo on virheellinen, käytä `avain: arvo`
+- Sarkaimia EI sallita, käytä VAIN välilyöntejä.
 
 Kommentit alkavat risuaidalla “#”.
 `# Tämä on kommentti`
