@@ -52,3 +52,47 @@ identifier:
     - function_arg: arg_value
     - function_arg: arg_value
 ```
+
+
+## Hello SLS!
+Testiympäristö:
+```
+Käyttöjärjestelmä: Ubuntu 22.04 LTS
+CPU: Intel® Core™ i5-1135G7 2.4 GHz
+Muisti: 8 GB
+```
+
+Käytin tähän tehtävään h2-tehtävänannon aikana rakennettua salt-ympäristöä. Vagrantin virtuaalikoneiden konfiguraatiotiedosto on sama, mitä h2-tehtävänannossa, joten pystyin käynnistämään sen suoraan `vagrant up` - komennolla. Tämän jälkeen kirjauduin SSH:n avulla master-koneelle, komennolla: `vagrant ssh tmaster`.
+
+Siirryin editoimaan init-tiedostoa, jolla luomme heimaailma-funktion. `$ sudo nano /srv/salt/hello/init.sls`. Kirjoitamme tilan init.sls tiedoston sisään.
+
+```
+helloworld:
+  cmd.run:
+    - name: echo "Hei maailma!"
+```
+
+Tallennan tiedoston CTRL+X + Y. Tämän jälkeen voimme ajaa tilan koneille. `$ sudo salt '*' state.apply hello`. 
+
+### Lopputulos, molemmat minionit printtasivat "Hei maailma!".:
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/225eb751-ea32-43f7-afa6-444383738438)
+
+## Top.
+
+Koska jotkut ympäristöt saattaa sisältää satoja tilatiedostoja, jotka kohdistuvat tuhansiin koneisiin, ei ole käytännöllistä suorittaa jokaista tilaa erikseen. Siksi luomme `top.sls`, tiedoston, jolla voimme ajaa useita tiloja samanaikaisesti. Tässä tapauksessa ajamme vain `hello` tilan. Täten meidän ei tarvitse ilmoittaa enään tilaa, mitä haluamme ajaa. Tarvitsemme vain komennon: `sudo salt '*' state.apply`.
+
+Kirjoitetaan top.sls tiedosto.
+
+$ sudo nano /srv/salt/top.sls
+```
+base:
+  '*':
+    - hello
+```
+
+Tämän jälkeen annamme komennon: `sudo salt '*' state.apply`
+
+### Lopputulos: Vagrant käyttää top.sls tiedostoa ajaakseen siinä listatut tilat: `hello`.
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/5b5eef8f-7a1c-4faf-804c-400b81502d43)
+
+
