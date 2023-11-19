@@ -32,4 +32,23 @@ Esimerkki: `avain: arvo`
 - Kommentit alkavat risuaidalla “#”.
 `# Tämä on kommentti`
 
-## Salt contributors: Salt states, kohdat
+## Salt contributors: Salt states
+- Komponentti, joka vastaa salt-tilojen täytäntöönpanosta ja hallinnasta.
+- Salt statet sisältää logiikan, jolla tarkistetaan onko jo oikessa konfiguraatiossa.
+
+Tilatiedosto sisältää 5 eri komponenttia:
+- Tunniste(Identifier): tilalle annettu nimi
+- Tila (State): Tilamoduulin nimi, joka sisältää esimerkiksi funktion: `pkg.installed`. Tässä tapauksessa viitataan paketinhallintaan.
+- Funktio (Function): `pkg.installed`-funktion `installed`-osa, jolla tarkistetaan, onko paketti oikeasti asennettu.
+- Nimi(Name): tiedoston nimi, jota asennetaan.
+- Agrumentit(Arguments): Argumentit, jotka hyväksytään tilassa, esim: `arg_value`
+```
+/srv/salt/example.sls
+
+identifier:
+  module.function:
+    - name: name_value
+    - function_arg: arg_value
+    - function_arg: arg_value
+    - function_arg: arg_value
+```
