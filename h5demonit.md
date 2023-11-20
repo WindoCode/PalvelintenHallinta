@@ -96,3 +96,22 @@ Tämän jälkeen annamme komennon: `sudo salt '*' state.apply`
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/5b5eef8f-7a1c-4faf-804c-400b81502d43)
 
 
+## Apache.
+
+Aloitin asennusprosessin käsin, ensiksi kirjauduin ulos master-koneelta, jonka jälkeen kirjauduin t001-minionille. `vagrant ssh t001`. Ensimmäiseksi tarkistin oliko koneella apache2-asennusta komennolla `sudo systemctl status apache2`. Asennusta ei löytynyt, joten asensin sen komennolla `sudo apt-get install apache2`. Tämän jälkeen siirryin apachen kansioon komennolla `$ cd /var/www/html`. `ls`-komennolla näytämme kansion tiedostot, josta löydämme `index.html` tiedoston. Käytämme `rm index.html`-komennon,jolla poistamme tiedoston. Teemme uuden tiedoston kansioon komennolla. `sudo nano newindex.html`.
+
+Lopuksi demonin tarkistus komennolla `sudo systemctl status apache2 | grep "Active"`. Voimme tällä komennolla todeta apachen olevan käynnissä. Poistamme samalla apache2-asennuksen ja siirrymme takaisin masterille tekemään uutta automatisoitua `init.sls`-tiedostoa.
+
+- `vagrant ssh tmaster`
+- `sudo nano /srv/salt/hello/init.sls`
+- Kirjoitamme init.sls tiedostoon 4 funktiota: apachen asennus, html-tiedoston poistaminen, uuden html-tiedoston luominen sekä daemonin tarkastuksen.
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/eb86687b-a4d7-463c-bb57-51c3fe365ce1)
+
+Koska meillä on jo top.sls tiedosto, jonka loimme aikaisemmin, voimme ajaa juuri tehdyn `init.sls`-tiedoston `sudo salt '*' state.apply`-komennolla. Testataan:
+
+### Lopputulos: Olemme saaneet toimimaan tehtävänannon 4 erilaista funktiota!
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/f7f59d66-8892-4cf9-bc8a-f99760934825)
+
+
+
