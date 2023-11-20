@@ -113,5 +113,26 @@ Koska meillä on jo top.sls tiedosto, jonka loimme aikaisemmin, voimme ajaa juur
 ### Lopputulos: Olemme saaneet toimimaan tehtävänannon 4 erilaista funktiota!
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/f7f59d66-8892-4cf9-bc8a-f99760934825)
 
+## SSHouto.
+
+- Kirjaututaan pois vagrant ssh-yhteydestä: `exit`.
+- `sudo apt update`
+- Asennetaan ssh-serveri `sudo apt-get install openssh-server`
+- Vaihdetaan portti ssh-konfiguraatiotiedostossa: `sudo nano /etc/ssh/sshd_config`
+- Poistetaan #, eli kommentti esimerkistä, ja vaihdetaan portti 22 porttiin 1234.
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/40f35814-e31a-4c20-96b8-9be435939e45)
+- Kun konfiguraatiotiedostoa muokataan, tulee aina Teron sanoin "potkaista demonia": Eli käynnistämme demonin uudestaan: `sudo systemctl restart sshd.service`
+- Kokeillaan lopputulosta! ??? Profit
+
+### Lopputulos: Yhteys: onnistunut!
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/4ee3d8dc-2c7f-483e-80e1-4cdffa314cad)
+
+## Lähteet
+- Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves [linkki](https://terokarvinen.com/2023/salt-vagrant/)
+- SaltStack, Rules of YAML [linkki](https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml)
+- SaltStack, Salt states [linkki](https://docs.saltproject.io/salt/user-guide/en/latest/topics/states.html#state-modules)
+- Karvinen 2023: Tehtävänanto: [linkki](https://terokarvinen.com/2023/configuration-management-2023-autumn/)
 
 
+
+  
