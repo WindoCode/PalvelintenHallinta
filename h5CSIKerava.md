@@ -44,7 +44,7 @@ ETC-kansion tulokset: Huomaan, että minulla ei ole oikeuksia joihinkin kansioih
 
       $ nano hello_world                    # komennon nimi:hello_world
       $ chmod +x hello_world                # ajo-oikeuden lisääminen kaikille
-      $ ./output                            # testataan komentoa: komento printtaa "Hello World!"
+      $ ./hello_world                       # testataan komentoa: komento printtaa "Hello World!"
       $ sudo mv hello_world /usr/local/bin/ # siirretään tiedosto, jotta komennon voi ajaa mistä hakemistosta tahansa
       $ hello_world                         # Komento printtaa: Hello World!
 
