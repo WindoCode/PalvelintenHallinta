@@ -63,6 +63,16 @@ ETC-kansion tulokset: Huomaan, että minulla ei ole oikeuksia joihinkin kansioih
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/78f7cc11-fb84-4c25-8974-28a8d3845207)
 
 
+## d) d) Apassi. Tee Salt-tila, joka asentaa Apachen näyttämään kotihakemistoja.
+
+- Missä apachen konfiguraatiotiedosto sijaitsee? Käytän tämän tehtävän apuna Teron ohjeita. Ohjeen löydät tämän linkin takaa. [Teron ohje](https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/). Löytääksemme nämä tiedostot meidän ensiksi ottaa käyttöön a2enmod userdir-käyttäjähakemisto. Ensiksi meidän täytyy ottaa käyttöön apache2-palvelin. `sudo apt install apache2`. Tämän jälkeen otamme käyttöön käyttäjähakemiston. `sudo a2enmod userdir`. Tämän jälkeen potkaisemme daemonia: `sudo systemctl restart apache2.` Tämän jälkeen voimme tarkistella apache2-kansion muutoksia komennolla `sudo find -printf '%T+ M %p\n%A+ A %p\n%C+ C %p\n'|sort`. 
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/703077c6-353d-431c-a153-413a8f89f407)
+
+- Voimme todeta printistä, että konffaustiedostot löytyy /mods-enabled-kansiosta.
+
+
+
 
 ## e) Ämpärillinen. Tee Salt-tila, joka asentaa järjestelmään kansiollisen komentoja.
 
@@ -83,6 +93,7 @@ ETC-kansion tulokset: Huomaan, että minulla ei ole oikeuksia joihinkin kansioih
 - Komentojen sijaintina on: salt://commands/commands
 - file_mode: keep tarkoittaa, että tiedoston oikeudet pysyvät samana, mikä on master koneella. Tässä tapauksessa '0755'. Täten meidän ei tarvitse muuttaa erikseen omia oikeuksia. Tämän kanssa kuitenkin tulee olla varovainen. Jos tälle tiedostolle antaa liikaa oikeuksia, tietokoneet voivat olla vaarassa, esim. sudo-hyökkäys, jossa korotetaan käyttäjän taso sudoksi.
 - cp -a kopioi tiedostot minion-koneen bin kansioon /tmp/commands kansiosta.
+
 
 
 
