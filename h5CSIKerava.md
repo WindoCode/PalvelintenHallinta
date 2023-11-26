@@ -64,6 +64,29 @@ ETC-kansion tulokset: Huomaan, että minulla ei ole oikeuksia joihinkin kansioih
 
 
 
+## e) Ämpärillinen. Tee Salt-tila, joka asentaa järjestelmään kansiollisen komentoja.
+
+- Ensiksi loin käsin hakemiston bin-kansioon, johon tein 3 Hello world-komentoa. Nimesin kansion commands-kansioksi. Komennot muikailee C-tehtävän komentoa, pienin muutoksin joka komennossa. Komennot sijaitsevat /usr/local/bin - kansiossa ja annoin kaikille komennoille ajo-oikeuden komennolla chmod +x hello1,hello2,hello3. Komennot toimivat käsin tehtynä, nyt siirrytään asian pihviin, eli automatisointiin.
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/a6e426f5-b489-43c5-b172-3b13ae410533)
+
+- Mitä init.sls-tiedostoon tarvitsemme kirjoittaa?
+- Kansion kopioiminen commands-kansiosta
+- tiedostooikeuksien pysyminen samana
+- kopioiminen commands-kansiosta minionin bin-kansioon.
+
+- Yritin käyttää linkkiä salt-tilan commands-kansiosta omaan bin-kansioon init.sls tiedostossa, mutta sain virhekoodiksi salt-tilan käyttöönotossa, että sls-tiedostossa tarvitaan absoluuttinen polku tiedostoihin. Täten vaihdoin sourceksi: salt://commands/commands, jossa komennot sijaitsivat. Alla lopullinen koodi, joka toimi.
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/2f16eb37-2ad6-43fb-b7c6-6060b5dbb920)
+
+- Käytin tehtävässä file.recurse-funktiota, jolla voimme siirtää hakemiston samoilla oikeuksilla minion-koneille
+- Komentojen sijaintina on: salt://commands/commands
+- file_mode: keep tarkoittaa, että tiedoston oikeudet pysyvät samana, mikä on master koneella. Tässä tapauksessa '0755'. Täten meidän ei tarvitse muuttaa erikseen omia oikeuksia. Tämän kanssa kuitenkin tulee olla varovainen. Jos tälle tiedostolle antaa liikaa oikeuksia, tietokoneet voivat olla vaarassa, esim. sudo-hyökkäys, jossa korotetaan käyttäjän taso sudoksi.
+- cp -a kopioi tiedostot minion-koneen bin kansioon /tmp/commands kansiosta.
+
+
+
+
 
 
 
