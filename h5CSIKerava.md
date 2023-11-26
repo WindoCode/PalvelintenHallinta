@@ -1,7 +1,20 @@
 # h5 CSIKerava
 
+
+## x) Lue ja tiivistä: Apache User Homepages Automatically – Salt Package-File-Service Example
+
+- Artikkelin pihvi on find-komennon käyttö. find-komennolla etsitään esimerkiksi tiedostoja tai kansioita.
+      - `find -printf "%T+ %p\n"|sort`
+      - `printf`- printtausfunktio
+      - `%T+` - muokkausaika
+      - `%p` - path = tiedostonimi ja polku
+      - `/n`- uusi rivi
+      - `sort` - aakkosjärjestys, tai järjestys pienimmästä suurimpaan numeroilla.
+  - Tee aina käsin, ennen kuin alat automatisoimaan. 
+  - Tee salt-tiloista idempotentti eli komennoilla aina sama vaikutus, vaikka kuinka usein sen ajaa.
+
 ## a) CSI Kerava - Find-komennolla kotihakemistosta sekä etc-kansiosta viisi viimeisintä muokattua tiedostoa.
-En ehtinyt olemaan tunnilla loppuun saakka,joten aloitin suoraan teron vinkistä: `find -printf '%T+ %p\n'`. Komento ymmärtääkseni etsii tiedostoja koko tietokoneelta ja tulostaa niiden viimeisen muokkausajan ja polun. Tämä komento ei kuitenkaan järjestele muokkauksia mitenkään. Siksi lisään komentoon uuden komennon: `sort -r` ja `head -n 5`. Määritän vielä hakukohteeksi etc-kansion. `find /etc/`.
+- En ehtinyt olemaan tunnilla loppuun saakka,joten aloitin suoraan teron vinkistä: `find -printf '%T+ %p\n'`. Komento ymmärtääkseni etsii tiedostoja koko tietokoneelta ja tulostaa niiden viimeisen muokkausajan ja polun. Tämä komento ei kuitenkaan järjestele muokkauksia mitenkään. Siksi lisään komentoon uuden komennon: `sort -r` ja `head -n 5`. Määritän vielä hakukohteeksi etc-kansion. `find /etc/`.
 
 
 - `find /etc/ -printf '%T+ %p\n' | sort -r | head -n 5`
@@ -9,7 +22,7 @@ En ehtinyt olemaan tunnilla loppuun saakka,joten aloitin suoraan teron vinkistä
 - `sort -r`: Järjestää tulokset käänteisessä aikajärjestyksessä (uusimmasta vanhimpaan).
 - `head -n 5` : Näyttää vain viisi ensimmäistä riviä, eli viisi viimeisintä muokattua tiedostoa.
 
-ETC-kansion tulokset: Huomaan, että minulla ei ole oikeuksia joihinkin kansioihin, joten käytän sudo:a, jolloin saamme jokaisen mahdollisen muutoksen näkyviin. Muutoksia ei tullut. Näemme kuitenkin muutoksia, joita olen tehnytkin aikaisemmin liittyen viime kotitehtävään: salt-minion+ssh.
+- ETC-kansion tulokset: Huomaan, että minulla ei ole oikeuksia joihinkin kansioihin, joten käytän sudo:a, jolloin saamme jokaisen mahdollisen muutoksen näkyviin. Muutoksia ei tullut. Näemme kuitenkin muutoksia, joita olen tehnytkin aikaisemmin liittyen viime kotitehtävään: salt-minion+ssh.
 
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/ac8199f4-9b42-4d4f-95fc-115c194784fd)
 
@@ -71,7 +84,28 @@ ETC-kansion tulokset: Huomaan, että minulla ei ole oikeuksia joihinkin kansioih
 
 - Voimme todeta printistä, että konffaustiedostot löytyy /mods-enabled-kansiosta.
 
+- Seuraavaksi automatisointi. Voimme käyttää pohjana Teron ohjeesta "Better way with files" init.sls-pohjaa. Meidän kuitenkin tulee lisätä uusi tiedosto, index.html home/public_html-kansioon. Lisäämme siis pohjalle:
 
+```
+/home/vagrant/public_html:
+      file.managed:
+        - makedirs: true # luo roottina kansiot
+        - owner: vagrant # omistaja: vagrant, jokaisella minionilla sama nimi käytössä.
+        - group: vagrant
+        - mode: "0755"  # Owner kaikki oikeudet, muilla luku ja execute-oikeus.
+```
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/e65d7b8d-8214-4e61-b488-9e6d04955992)
+
+- Lopulta voimme ajaa init.sls-tiedoston `sudo salt '*' state.apply apache`.
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/832d8eb9-2579-4d10-9404-423a0c16236f)
+
+- Tarkistetaan vielä, että index.html tiedosto on valmiina minionilla, t001-koneella. Tarkistamme, onko tiedosto oikeassa kansiossa oikeilla oikeuksilla komennolla: `ls -l public_html/`. Kirjaudumme ulos masterilta ja kirjaudumme minionille `vagrant ssh t001`.
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/bf18dac8-f505-4f98-988b-40bbc8ea90cc)
+
+- Voimme todeta, että kotisivu on toiminnassa ja käyttäjä voi tehdä sille muutoksia.
 
 
 ## e) Ämpärillinen. Tee Salt-tila, joka asentaa järjestelmään kansiollisen komentoja.
