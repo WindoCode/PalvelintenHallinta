@@ -37,3 +37,35 @@ ETC-kansion tulokset: Huomaan, että minulla ei ole oikeuksia joihinkin kansioih
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/1d3b0549-a405-4632-aa1b-8d819f3df8cc)
 
 - Voimme nähdä myös tämän muutoksen kansiossa tiedostomuutoksina. Voimme käyttää edellisen kohdan komentoa löytääksemme muutokset. `find -printf '%T+ %p \n' | sort`
+
+## c) Komennus. Tee Salt-tila, joka asentaa järjestelmään uuden komennon.
+
+- Ensin käsin. Teen yksinkertaisen Hello World-komennon. Tämän jälkeen voimme automatiEnsin komennon asentaminen käsin yhdelle koneelle (masterilla):
+
+      $ nano hello_world                    # komennon nimi:hello_world
+      $ chmod +x hello_world                # ajo-oikeuden lisääminen kaikille
+      $ ./output                            # testataan komentoa: komento printtaa "Hello World!"
+      $ sudo mv hello_world /usr/local/bin/ # siirretään tiedosto, jotta komennon voi ajaa mistä hakemistosta tahansa
+      $ hello_world                         # Komento printtaa: Hello World!
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/56ab19f2-6306-4b0e-9f18-20ad628e590a)
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/09b86cb5-66ef-4698-a840-3e85e016dace)
+
+- Automatisoidaan prosessi. Aloitamme tekemällä kansion salt-kansioon nimeltä komennot: `sudo mkdir /srv/salt/commands` Commands-kansioon voimme linkittää hello_world-komennon `/usr/local/bin/hello_world` kansiosta. `sudo ln -s /usr/local/bin/hello_world` Tämän jälkeen teemme init.sls tiedoston, jossa pyydämme luomaan koneelle bin-kansioon uuden komennon, joka lisää hello_world komennon master-koneelta. Lisäämme myös tiedostoikeudet: 0755.
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/134480c1-57b4-4261-9a28-32f33b2c4387)
+
+
+
+- Tämän jälkeen voimme minioneita ajamaan tilan: `sudo salt '*' state.apply commands`
+- Lopputulos: Kokeillaan minionilla komentoa. `vagrant ssh t001` ja `hello_world`. 
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/78f7cc11-fb84-4c25-8974-28a8d3845207)
+
+
+
+
+
+
+
+
