@@ -128,7 +128,7 @@
 - file_mode: keep tarkoittaa, että tiedoston oikeudet pysyvät samana, mikä on master koneella. Tässä tapauksessa '0755'. Täten meidän ei tarvitse muuttaa erikseen omia oikeuksia. Tämän kanssa kuitenkin tulee olla varovainen. Jos tälle tiedostolle antaa liikaa oikeuksia, tietokoneet voivat olla vaarassa, esim. sudo-hyökkäys, jossa korotetaan käyttäjän taso sudoksi.
 - cp -a kopioi tiedostot minion-koneen bin kansioon /tmp/commands kansiosta.
 
-#Lähteet
+# Lähteet
 
 - Tero Karvinen, Apache User Homepages Automatically – Salt Package-File-Service Example, 2018. [Linkki](https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/)
 - Tero Karvinen, Tehtävänanto, 2023. [Linkki](https://terokarvinen.com/2023/configuration-management-2023-autumn/)
