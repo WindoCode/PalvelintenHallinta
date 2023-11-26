@@ -3,7 +3,7 @@
 
 ## x) Lue ja tiivistä: Apache User Homepages Automatically – Salt Package-File-Service Example
 
-- Artikkelin pihvi on find-komennon käyttö. find-komennolla etsitään esimerkiksi tiedostoja tai kansioita.
+### Artikkelin pihvi on find-komennon käyttö. find-komennolla etsitään esimerkiksi tiedostoja tai kansioita.
       - `find -printf "%T+ %p\n"|sort`
       - `printf`- printtausfunktio
       - `%T+` - muokkausaika
