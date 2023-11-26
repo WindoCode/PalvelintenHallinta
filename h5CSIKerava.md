@@ -119,7 +119,7 @@
 - tiedostooikeuksien pysyminen samana
 - kopioiminen commands-kansiosta minionin bin-kansioon.
 
-- Yritin käyttää linkkiä salt-tilan commands-kansiosta omaan bin-kansioon init.sls tiedostossa, mutta sain virhekoodiksi salt-tilan käyttöönotossa, että sls-tiedostossa tarvitaan absoluuttinen polku tiedostoihin. Täten vaihdoin sourceksi: salt://commands/commands, jossa komennot sijaitsivat. Alla lopullinen koodi, joka toimi.
+- Yritin käyttää linkkiä salt-tilan commands-kansiosta omaan bin-kansioon init.sls tiedostossa, mutta sain virhekoodiksi salt-tilan käyttöönotossa, että sls-tiedostossa tarvitaan absoluuttinen polku tiedostoihin. Täten vaihdoin sourceksi: salt://commands/commands, jossa komennot sijaitsivat. Alla lopullinen koodi, joka toimi. 
 
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/2f16eb37-2ad6-43fb-b7c6-6060b5dbb920)
 
@@ -128,11 +128,11 @@
 - file_mode: keep tarkoittaa, että tiedoston oikeudet pysyvät samana, mikä on master koneella. Tässä tapauksessa '0755'. Täten meidän ei tarvitse muuttaa erikseen omia oikeuksia. Tämän kanssa kuitenkin tulee olla varovainen. Jos tälle tiedostolle antaa liikaa oikeuksia, tietokoneet voivat olla vaarassa, esim. sudo-hyökkäys, jossa korotetaan käyttäjän taso sudoksi.
 - cp -a kopioi tiedostot minion-koneen bin kansioon /tmp/commands kansiosta.
 
+#Lähteet
 
-
-
-
-
+- Tero Karvinen, Apache User Homepages Automatically – Salt Package-File-Service Example, 2018. [Linkki](https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/)
+- Tero Karvinen, Tehtävänanto, 2023. [Linkki](https://terokarvinen.com/2023/configuration-management-2023-autumn/)
+- SaltStack, dokumentaatio, file.recurse-funktio [Linkki](https://docs.saltproject.io/en/latest/ref/states/all/salt.states.file.html)
 
 
 
