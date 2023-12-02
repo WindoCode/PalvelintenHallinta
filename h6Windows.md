@@ -1,4 +1,4 @@
-![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/e125b74b-a88f-40fd-9441-cb6ddd270f1c)## x) Lue ja tiivistä
+## x) Lue ja tiivistä
 
 ## Edellinen windows-kotitehtävä
 
