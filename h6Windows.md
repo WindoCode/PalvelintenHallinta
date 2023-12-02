@@ -3,11 +3,16 @@
 ## Edellinen windows-kotitehtävä
 
 - Valitsin sannir-nimimerkillä githubissa toimivan kotitehtävä-raportin viime vuoden palvelinten hallinta toteutukselta.
+- 
 - Asentaa Windowsiin saltin, jonka jälkeen luo tilan, jossa luo uuden tekstitiedoston.
+  
 - Käyttää grains.items funktiota, jolla saa tekniset tiedot nykyisestä koneestaan.
+
 - Hän näyttää esimerkit portin kokeilusta Linuxilla ja Windowsilla. Molemmilla käyttöjärjestelmillä tulee näyttää ainakin yksi avoin ja yksi suljettu portti.
+  
 - Windowsilla porttitiedot komennolla:`netstat -ano` ja Linuxilla: `sudo ss -tulpn`
-https://github.com/sannnir/h5-Windows
+  
+- https://github.com/sannnir/h5-Windows
 
 ## Halonen, Rajala ja Ollikainen 2023: Installing Windows 10 on a virtual machine
 - Valitaan uusi kone virtualboxissa ja valitaan versioksi "Windows 10 (64-bit)".
