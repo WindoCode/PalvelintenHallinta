@@ -21,11 +21,11 @@ https://github.com/sannnir/h5-Windows
 - FSH mahdollistaa kyvyn ennustaa asennettujen tiedostojen ja hakemistojen sijainnit.
 - Roothakemisto `/` on ensisijainen hierarkian juuri ja koko tiedostojärjestelmähierarkian juurihakemisto. Se sisältää seuraavat tärkeät alihakemistot:
 
-- `/bin`: Välttämättömät käyttäjän komennot, jotka on oltava saatavilla yksittäisen käyttäjän tilassa. (esim. cat, ls, cp).
-- `/boot`: Käynnistyslataustiedostot (esim. ytimet).
-- `/dev`: Laite-tiedostot (esim. /dev/null, /dev/disk0, /dev/sda1).
-- `/etc`: konfiguraatiotiedostot (esim. ohjelmistojen konfiguraatiotiedostot, joita muokkasimme viime kotitehtävässä).
-- `/home`: Käyttäjien kotihakemistot, jotka sisältävät tallennetut tiedostot, henkilökohtaiset asetukset jne.
-- `/lib`: Kirjastot, jotka ovat välttämättömiä /bin ja /sbin hakemistojen binääreille.
+* `/bin`: Välttämättömät käyttäjän komennot, jotka on oltava saatavilla yksittäisen käyttäjän tilassa. (esim. cat, ls, cp).
+* `/boot`: Käynnistyslataustiedostot (esim. ytimet).
+* `/dev`: Laite-tiedostot (esim. /dev/null, /dev/disk0, /dev/sda1).
+* `/etc`: konfiguraatiotiedostot (esim. ohjelmistojen konfiguraatiotiedostot, joita muokkasimme viime kotitehtävässä).
+* `/home`: Käyttäjien kotihakemistot, jotka sisältävät tallennetut tiedostot, henkilökohtaiset asetukset jne.
+* `/lib`: Kirjastot, jotka ovat välttämättömiä /bin ja /sbin hakemistojen binääreille.
 
 
