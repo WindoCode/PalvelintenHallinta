@@ -1,4 +1,4 @@
-## x) Lue ja tiivistä
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/e125b74b-a88f-40fd-9441-cb6ddd270f1c)## x) Lue ja tiivistä
 
 ## Edellinen windows-kotitehtävä
 
@@ -27,5 +27,40 @@ https://github.com/sannnir/h5-Windows
 * `/etc`: konfiguraatiotiedostot (esim. ohjelmistojen konfiguraatiotiedostot, joita muokkasimme viime kotitehtävässä).
 * `/home`: Käyttäjien kotihakemistot, jotka sisältävät tallennetut tiedostot, henkilökohtaiset asetukset jne.
 * `/lib`: Kirjastot, jotka ovat välttämättömiä /bin ja /sbin hakemistojen binääreille.
+
+## a) Asenna Windows virtuaalikoneeseen.
+- Käytin tämän tehtävän tekemiseen aikaisemmin mainittua ohjetta: "Halonen, Rajala ja Ollikainen 2023: Installing Windows 10 on a virtual machine". Latasin asennustiedoston Windowsin sivuilta: Win10, Enterprise evaluation, 64-bit. Tein uuden virtuaalikoneen VirtualBoxissa, Windows 10. Asetin muistiksi 8GB, lisäsin 2 prosessoria ja avasin koneen. Lisäsin asennustiedoston, kun virtualbox sitä pyysi. Valitsin suomenkielisen näppäimistön, alueen ja tein koneella oman domainin.
+
+## Asenna Salt Windowsille. Osoita 'salt-call --local' komentoa ajamalla, että asennus on onnistunut.
+
+- Ladataan Salt Windows-asennustiedosto Saltprojectin sivulta.
+- Avataan komentokehoite as admin.
+- Siirrytään lataukset kansioon
+` cd C:\Users\Valtteri\Downloads`
+- Käynnistetään salt-minion asennustiedosto.
+`./Salt-Minion-3004.2-1-Py3-AMD64.msi`
+- Asetin asennuksessa masterip:ksi koneen ip:n ja minioksi localhost.
+- Kokeilen salttia komennolla: `salt-call --local cmd.run ”echo hello”`
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/0fc6dea9-7e3f-43bf-80c4-e9b1b58f7040)
+
+## c) Kerää Windows-koneesta tietoa grains.items -toiminnolla. 
+
+- Ensiksi keräämme kaikki tiedot koneesta komennolla `salt-call --local grains.items`.
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/91eac708-39da-436d-ab74-1423cfb30654)
+- Voimme tämän jälkeen hakea grains-item - komennolla tiettyjä koneen tietoja. Haemme esimerkiksi prosessorin nimen sekä käyttöjärjestelmän. `cpu_model` ja `osfinger`. Koko komento: salt-call --local grains.item cpu_model osfinger.
+- `cpu-model` palauttaa järjestelmän prosessori-mallin, jossa komento suoritetaan.
+- `osfinger`  palauttaa käyttöjärjestelmän.
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/aaae0107-3e2d-4da7-863c-1b032661bf3b)
+
+## d) Kokeile Saltin file -toimintoa Windowsilla.
+- Teemme yksinkertaisen file-tilan, jossa luomme "valtteri"-käyttäjäkansioon uuden teksti tiedoston "testi.txt".
+- salt-call --local state.single file.managed C:\Users\valtteri\testi.txt
+- Tarkistetaan vielä, että komento teki oikeasti tiedoston.
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/07a728e3-7dbf-416e-a343-0f99ba38d233)
+- Tarkistus dir-komennolla.
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/22ef56d3-a32b-4585-a260-e4828ba5944f)
+
+
+
 
 
