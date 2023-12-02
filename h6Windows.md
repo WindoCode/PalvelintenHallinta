@@ -3,7 +3,6 @@
 ## Edellinen windows-kotitehtävä
 
 - Valitsin sannir-nimimerkillä githubissa toimivan kotitehtävä-raportin viime vuoden palvelinten hallinta toteutukselta.
-- 
 - Asentaa Windowsiin saltin, jonka jälkeen luo tilan, jossa luo uuden tekstitiedoston.
   
 - Käyttää grains.items funktiota, jolla saa tekniset tiedot nykyisestä koneestaan.
@@ -34,7 +33,9 @@
 * `/lib`: Kirjastot, jotka ovat välttämättömiä /bin ja /sbin hakemistojen binääreille.
 
 ## a) Asenna Windows virtuaalikoneeseen.
-- Käytin tämän tehtävän tekemiseen aikaisemmin mainittua ohjetta: "Halonen, Rajala ja Ollikainen 2023: Installing Windows 10 on a virtual machine". Latasin asennustiedoston Windowsin sivuilta: Win10, Enterprise evaluation, 64-bit. Tein uuden virtuaalikoneen VirtualBoxissa, Windows 10. Asetin muistiksi 8GB, lisäsin 2 prosessoria ja avasin koneen. Lisäsin asennustiedoston, kun virtualbox sitä pyysi. Valitsin suomenkielisen näppäimistön, alueen ja tein koneella oman domainin.
+- Käytin tämän tehtävän tekemiseen aikaisemmin mainittua ohjetta: "Halonen, Rajala ja Ollikainen 2023: Installing Windows 10 on a virtual machine". Latasin asennustiedoston Windowsin sivuilta: Win10, Enterprise evaluation, 64-bit.
+-  Tein uuden virtuaalikoneen VirtualBoxissa, Windows 10. Asetin muistiksi 8GB, lisäsin 2 prosessoria ja avasin koneen.
+-  Lisäsin asennustiedoston, kun virtualbox sitä pyysi. Valitsin suomenkielisen näppäimistön, alueen ja tein koneella oman domainin.
 
 ## Asenna Salt Windowsille. Osoita 'salt-call --local' komentoa ajamalla, että asennus on onnistunut.
 
