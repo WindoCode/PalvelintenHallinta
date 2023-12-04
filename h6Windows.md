@@ -47,6 +47,7 @@
 `./Salt-Minion-3004.2-1-Py3-AMD64.msi`
 - Asetin asennuksessa masterip:ksi koneen ip:n ja minioksi localhost.
 - Kokeilen salttia komennolla: `salt-call --local cmd.run ”echo hello”`
+
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/0fc6dea9-7e3f-43bf-80c4-e9b1b58f7040)
 
 ## c) Kerää Windows-koneesta tietoa grains.items -toiminnolla. 
@@ -56,6 +57,7 @@
 - Voimme tämän jälkeen hakea grains-item - komennolla tiettyjä koneen tietoja. Haemme esimerkiksi prosessorin nimen sekä käyttöjärjestelmän. `cpu_model` ja `osfinger`. Koko komento: salt-call --local grains.item cpu_model osfinger.
 - `cpu-model` palauttaa järjestelmän prosessori-mallin, jossa komento suoritetaan.
 - `osfinger`  palauttaa käyttöjärjestelmän.
+
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/aaae0107-3e2d-4da7-863c-1b032661bf3b)
 
 ## d) Kokeile Saltin file -toimintoa Windowsilla.
