@@ -90,6 +90,7 @@ salt-call --local key.finger
 
 ## Lähteet
 
+- Kotitehtävä, sannir, GitHub. [Linkki](https://github.com/sannnir/h5-Windows)
 - Tero Karvinen, Tehtävänanto: [Linkki](https://terokarvinen.com/2023/configuration-management-2023-autumn/#h6-windows)
 - Halonen, Rajala ja Ollikainen 2023: Installing Windows 10 on a virtual machine. [Linkki](https://github.com/therealhalonen/PhishSticks/blob/master/notes/ollikainen/windows.md)
 - Filesystem Hierarchy Standard, LSB Workgroup, The Linux Foundation, [Linkki](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
