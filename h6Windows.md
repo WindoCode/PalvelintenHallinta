@@ -63,9 +63,36 @@
 - salt-call --local state.single file.managed C:\Users\valtteri\testi.txt
 - Tarkistetaan vielä, että komento teki oikeasti tiedoston.
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/07a728e3-7dbf-416e-a343-0f99ba38d233)
+
 - Tarkistus dir-komennolla.
+
 ![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/22ef56d3-a32b-4585-a260-e4828ba5944f)
 
+## e) Kokeile jotain itsellesi uutta toimintoa Saltista Windowsilla.
+
+- Päätin kokeilla MINION KEY FINGERPRINT-toimintoa.
+```
+salt-call --local key.finger
+```
+
+Tällä komennolla voimme tarkistaa minionin avaimen sormenjäljen. Jos olisimme esimerkiksi minionilla voisimme tarkistaa 
+
+```
+salt-call --local key.finger
+```
+
+![image](https://github.com/WindoCode/PalvelintenHallinta/assets/110290723/c1cf3640-bfd9-4e31-877f-1da269800e32)
+
+- Jos haluamme tarkistaa masterin avaimen käyttäisimme komentoa: `salt-key -F master`. Vertaisimme tätä arvoa arvoon, joka näkyy `salt-key --finger <MINION_ID>` -komennon printtinä Salt-masterissa.
+
+
+## Lähteet
+
+- Tero Karvinen, Tehtävänanto: [Linkki](https://terokarvinen.com/2023/configuration-management-2023-autumn/#h6-windows)
+- Halonen, Rajala ja Ollikainen 2023: Installing Windows 10 on a virtual machine. [Linkki](https://github.com/therealhalonen/PhishSticks/blob/master/notes/ollikainen/windows.md)
+- Filesystem Hierarchy Standard, LSB Workgroup, The Linux Foundation, [Linkki](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
+- Windows asennustiedosto, [Linkki](https://www.microsoft.com/en-us/evalcenter/download-windows-10-enterprise)
+- MINION KEY FINGERPRINT,Configuring Salt, SaltStack. [Linkki](https://docs.saltproject.io/en/latest/ref/configuration/index.html)
 
 
 
